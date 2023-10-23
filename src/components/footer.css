@@ -1,0 +1,9 @@
+.footer {
+    background-color: rgb(26, 54, 35);
+    height: 10vh;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    padding: 30px;
+    color: aliceblue;
+}
