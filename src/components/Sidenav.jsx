@@ -4,6 +4,12 @@ import { Context } from "../context/parkingContext/context";
 
 export default function Sidenav() {
   const { dispatch } = useContext(Context);
+  const handleAdd = () => {
+    dispatch({ type: "ADD", payload: 'add' })
+}
+const handleView = () => {
+    dispatch({ type: "ADD", payload: 'view' })
+}
   const handleHome = () => {
       dispatch({ type: "HOME", payload: 'Home' })
   }
@@ -13,7 +19,7 @@ export default function Sidenav() {
   const handleReports = () => {
       dispatch({ type: "REPORTS", payload: 'Reports' })
   }
-  const handleTransactions = () => {
+  const handleTransaction = () => {
     dispatch({ type: "TRANSACTION", payload: 'Transaction' })
 }
 const handleLogin = () => {
@@ -22,16 +28,23 @@ const handleLogin = () => {
   return (
     <div className='sidenav'>
       <div className="sidenav_wrapper">
+        <div className="sidenav_title" onClick={handleAdd}>Signup</div>
+      </div>
+      <div className="sidenav_wrapper">
+        <div className="sidenav_title" onClick={handleView}>Login</div>
+      </div>
+      <div className="sidenav_wrapper">
         <div className="sidenav_title" onClick={handleHome}>Home</div>
       </div>
       <div className="sidenav_wrapper">
-        <div className="sidenav_item" onClick={handleAdmin}>Admin</div>
+       <div className="sidenav_item" onClick={handleAdmin}>Admin</div>
       </div>
       <div className="sidenav_wrapper">
-      <div className="sidenav_item" onClick={handleReports}>Reports</div> 
+       <div className="sidenav_item" onClick={handleReports}>Reports</div> 
       </div>
       <div className="sidenav_wrapper">
-      <div className="sidenav_item" onClick={handleTransactions}>Transactions</div> 
+       <div className="sidenav_item" onClick={handleTransaction}>Transaction
+       </div> 
       </div>
       
     </div>

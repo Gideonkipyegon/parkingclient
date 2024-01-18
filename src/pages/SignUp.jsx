@@ -41,7 +41,7 @@ function SignUp() {
         <p>{errors.FirstName?.message}</p>
         <label htmlFor="">Lasttname</label>
         <input type="text" {...register("LastName")} placeholder='lastname' />
-        <p>{errors.lastName?.message}</p>
+        <p>{errors.LastName?.message}</p>
         <label htmlFor="">Email</label>
         <input type="text" {...register("EmailAddress")} placeholder='email' />
         <p>{errors.Email?.message}</p>

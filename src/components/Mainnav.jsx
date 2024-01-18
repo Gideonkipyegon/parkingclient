@@ -4,12 +4,25 @@ import Home from "../pages/Home";
 import Admin from "./Admin";
 import Reports from "./Reports";
 import Transaction from "./Transaction";
+import Signup from './pages/Signup'
+import Contact from './pages/Contact'
 import "./mainnav.css"
+// import AdminLogin from "./Admin";
 export default function Mainavbar() {
   const { ui } = useContext(Context);
   return (
     <div className="mainnav">
-      {ui == "add" ? (
+      { ui == "add" ? (
+        <div className="mainnav_wrapper">
+          {/* <h2>Create Post</h2> */}
+          <Signup />
+        </div>
+      ) :ui == "view" ? (
+        <div className="mainnav_wrapper">
+          {/* <h2>Create Post</h2> */}
+          <Contact />
+        </div>
+      ) :ui == "Home" ? (
         <div className="mainnav_wrapper">
           {/* <h2>Create Post</h2> */}
           <Home />

@@ -1,0 +1,30 @@
+.admin {
+    align-items: center;
+    /* display: flex; */
+    background-color: aqua;
+    margin-top: -20px;
+    justify-content: center;
+    height: 70vh;
+}
+
+h2 {
+    margin-left: 100px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.adminform {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* background-color: beige; */
+    margin-left: 450px;
+    align-content: center;
+    gap: 10px;
+    width: 40%;
+    padding-bottom: 60px;
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 5px;
+}

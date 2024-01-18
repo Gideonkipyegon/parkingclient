@@ -11,6 +11,7 @@ import About from './pages/About'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Sidenav from './components/Sidenav'
+import Admin from './components/Admin.jsx'
 function App() {
   
 
@@ -20,7 +21,8 @@ function App() {
       <Header/>
       <Routes>
       <Route path='/' element={<Sidenav />}/>
-      <Route path='Home/' element={<Home />}/>
+      <Route path='/Home' element={<Home />}/>
+      <Route path='/Admin' element={<Admin />}/>
       <Route path='/Login' element={<Login />}/>
       <Route path='/Signup' element={<SignUp />}/>
       <Route path='/About' element={<About />}/>

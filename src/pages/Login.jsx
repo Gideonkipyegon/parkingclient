@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { Context } from '../context/userContext/Context';
+import { Context } from '../context/userContext/Context';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -13,7 +13,7 @@ function Login() {
   const navigate = useNavigate();
   const schema = yup.object().shape({
     FirstName: yup.string().required('First is required'),
-    Password: yup.string().required('Password is required').min(4, 'password is too short'),
+    password: yup.string().required('password is required').min(4, 'password is too short'),
   });
 
   const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
@@ -22,9 +22,9 @@ function Login() {
     Axios.post(`${apidomain}/auth/login`, data)
    .then(({data}) => {
     if(data.token){
-        dispatch({type:'LOGIN_SUCCESS', payload:data})
+        // dispatch({type:'LOGIN_SUCCESS', payload:data})
         alert("login successfull")
-        navigate("/Post");
+        navigate("/");
     }
    
 })
@@ -41,8 +41,8 @@ function Login() {
         <input type="text" {...register('FirstName')} placeholder="firstname"/>
         <p>{errors.FirstName?.message}</p>
         <label htmlFor="">Password</label>
-        <input type="password" {...register('Password')} placeholder="password"/>
-        <p>{errors.Password?.message}</p>
+        <input type="password" {...register('password')} placeholder="password"/>
+        <p>{errors.password?.message}</p>
         <button type='submit'>Login</button>
         </form>
     </div>
