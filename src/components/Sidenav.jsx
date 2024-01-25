@@ -5,48 +5,40 @@ import { Context } from "../context/parkingContext/context";
 export default function Sidenav() {
   const { dispatch } = useContext(Context);
   const handleAdd = () => {
-    dispatch({ type: "ADD", payload: 'add' })
-}
-const handleView = () => {
-    dispatch({ type: "ADD", payload: 'view' })
-}
+      dispatch({ type: "ADD", payload: 'add' })
+  }
+  const handleView = () => {
+      dispatch({ type: "ADD", payload: 'view' })
+  }
   const handleHome = () => {
       dispatch({ type: "HOME", payload: 'Home' })
   }
   const handleAdmin = () => {
-      dispatch({ type: "ADMIN", payload: 'Admin' })
-  }
-  const handleReports = () => {
-      dispatch({ type: "REPORTS", payload: 'Reports' })
-  }
-  const handleTransaction = () => {
-    dispatch({ type: "TRANSACTION", payload: 'Transaction' })
+    dispatch({ type: "ADMIN", payload: 'Admin' })
 }
-const handleLogin = () => {
-  dispatch({ type: "LOGIN", payload: 'Login' })
+const handleReports = () => {
+  dispatch({ type: "REPORTS", payload: 'Reports' })
+}
+const handleTransaction = () => {
+  dispatch({ type: "TRANSACTION", payload: 'Transaction' })
 }
   return (
     <div className='sidenav'>
       <div className="sidenav_wrapper">
-        <div className="sidenav_title" onClick={handleAdd}>Signup</div>
+        <div className="sidenav_item" onClick={handleAdmin}>Admin</div>
       </div>
       <div className="sidenav_wrapper">
-        <div className="sidenav_title" onClick={handleView}>Login</div>
+        <div className="sidenav_item" onClick={handleAdd}>Signup</div>
       </div>
       <div className="sidenav_wrapper">
-        <div className="sidenav_title" onClick={handleHome}>Home</div>
+        <div className="sidenav_item" onClick={handleView}>Home</div>
       </div>
       <div className="sidenav_wrapper">
-       <div className="sidenav_item" onClick={handleAdmin}>Admin</div>
+      <div className="sidenav_item" onClick={handleReports}>Reports</div> 
       </div>
       <div className="sidenav_wrapper">
-       <div className="sidenav_item" onClick={handleReports}>Reports</div> 
+      <div className="sidenav_item" onClick={handleTransaction}>Transaction</div> 
       </div>
-      <div className="sidenav_wrapper">
-       <div className="sidenav_item" onClick={handleTransaction}>Transaction
-       </div> 
-      </div>
-      
     </div>
   );
 }

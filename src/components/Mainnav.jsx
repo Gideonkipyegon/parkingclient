@@ -1,48 +1,46 @@
 import { useContext } from "react";
 import { Context } from "../context/parkingContext/context";
 import Home from "../pages/Home";
-import Admin from "./Admin";
-import Reports from "./Reports";
-import Transaction from "./Transaction";
-import Signup from './pages/Signup'
-import Contact from './pages/Contact'
+import Admin from "../components/Admin";
+import Reports from "../components/Reports";
+import Transaction from "../components/Transaction";
+import Signup from '../pages/Signup'
+import Contact from '../pages/Contact'
 import "./mainnav.css"
 // import AdminLogin from "./Admin";
-export default function Mainavbar() {
+export default function Mainnav() {
   const { ui } = useContext(Context);
-  return (
-    <div className="mainnav">
-      { ui == "add" ? (
-        <div className="mainnav_wrapper">
-          {/* <h2>Create Post</h2> */}
-          <Signup />
-        </div>
-      ) :ui == "view" ? (
-        <div className="mainnav_wrapper">
-          {/* <h2>Create Post</h2> */}
-          <Contact />
-        </div>
-      ) :ui == "Home" ? (
-        <div className="mainnav_wrapper">
-          {/* <h2>Create Post</h2> */}
-          <Home />
-        </div>
-      ) : ui == "Admin" ? (
-        <div className="mainnav_wrapper">
-          {/* <h2>View All Post</h2> */}
-          <Admin />
-        </div>
-      ) : ui == "Reports" ? (
-        <div className="mainnav_wrapper1">
-          {/* <h2>User Profile</h2> */}
-          <Reports />
-        </div>
-      ) : ui == "Transaction" ? (
-        <div className="mainnav_wrapper1">
-          {/* <h2>User Profile</h2> */}
-          <Transaction />
-        </div>
-      ) : null}
-    </div>
-  );
+return (
+  <div className='mainnav'>
+      {
+          ui == 'add' ? (
+              <div className="mainnav_wrapper">
+                  {/* <h2>Create Post</h2> */}
+                  <Signup />
+              </div>
+          ) : ui == 'view' ? (
+              <div className="mainnav_wrapper" >
+                  {/* <h2>View All Post</h2> */}
+                  <Home />
+              </div>
+          ): ui == 'Admin ' ? (
+              <div className="mainnav_wrapper1">
+                  {/* <h2>User Profile</h2> */}
+                  <Admin />
+              </div>
+          ): ui == 'Reports' ? (
+              <div className="mainnav_wrapper1">
+                  {/* <h2>User Profile</h2> */}
+                  <Reports />
+              </div>
+          ) : ui == 'Transaction' ? (
+              <div className="mainnav_wrapper1">
+                  {/* <h2>User Profile</h2> */}
+                  <Transaction />
+              </div>
+          ) : null
+
+      }
+  </div>
+)
 }
