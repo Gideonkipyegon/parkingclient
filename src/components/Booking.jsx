@@ -13,9 +13,12 @@ const ParkingSlotBooking = () => {
   const [selectedSlot, setSelectedSlot] = useState(null);
 
   const availableSlots = [
-    { id: 1, name: 'Slot A' },
-    { id: 2, name: 'Slot B' },
-    { id: 3, name: 'Slot C' },
+    { id: 1, name: 'Slot 1' },
+    { id: 2, name: 'Slot 2' },
+    { id: 3, name: 'Slot 3' },
+    { id: 4, name: 'Slot 4' },
+    { id: 5, name: 'Slot 5' },
+    { id: 6, name: 'Slot 6' },
     // Add more slots as needed
   ];
 
@@ -34,19 +37,19 @@ const ParkingSlotBooking = () => {
   };
 
   return (
-    <div>
+    <div style={{marginLeft:'25px',marginBottom:'20px'}}>
       <h2>Parking Slot Booking</h2>
       <div>
-        <p style={{marginLeft:'25px'}}>Select a parking slot:</p>
+        <p style={{marginLeft:'25px'}}>Available parking slots:</p>
         <ul>
           {availableSlots.map((slot) => (
-            <li key={slot.id} onClick={() => handleSlotSelection(slot.id)} style={{ cursor: 'pointer', textDecoration: selectedSlot === slot.id ? 'underline' : 'none',marginLeft:'15px' }}>
+            <li key={slot.id} onClick={() => handleSlotSelection(slot.id)} style={{ cursor: 'pointer', textDecoration: selectedSlot === slot.id ? 'underline' : 'none',marginLeft:'15px',color:'red'}}>
               {slot.name}
             </li>
           ))}
         </ul>
       </div>
-      <button onClick={handleBooking} style={{marginLeft:'25px',marginBottom:'20px'}}>Book Slot</button>
+      <button onClick={handleBooking} style={{marginLeft:'25px',marginBottom:'20px',color:'black'}}>Book Your Slot</button>
     </div>
   );
 };

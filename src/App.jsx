@@ -14,6 +14,8 @@ import Booking from './components/Booking.jsx'
 import Header from './components/Header'
 import Sidenav from './components/Sidenav'
 import Admin from './components/Admin.jsx'
+import Rates from './components/Rates.jsx'
+import Reports from './components/Reports.jsx'
 // import Transaction from './components/Transaction.jsx'
 function App() {
   
@@ -26,8 +28,10 @@ function App() {
       <Route path='/' element={<Sidenav />}/>
       <Route path='/Home' element={<Home />}/>
       <Route path='/Booking' element={<Booking />}/>
+      <Route path='/Reports' element={<Reports />}/>
       <Route path='/Admin' element={<Admin />}/>
       <Route path='/Login' element={<Login />}/>
+      <Route path='/Rates' element={<Rates />}/>
       <Route path='/Signup' element={<SignUp />}/>
       <Route path='/About' element={<About />}/>
       <Route path='/Contact' element={<Contact />}/>

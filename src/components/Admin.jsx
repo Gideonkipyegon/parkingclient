@@ -12,7 +12,7 @@ function AdminLogin() {
     // Check admin credentials (this is a basic example, in a real app, you'd perform server-side authentication)
     if (username === 'admin' && password === 'password') {
       // Successful login, navigate to admin panel
-      Axios.post(`${apidomain}/auth/Admin`, data);
+      Axios.post(`${apidomain}/auth/register`, data);
     } else {
       alert('Invalid credentials. Please try again.');
     }

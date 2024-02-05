@@ -23,7 +23,7 @@ return (
                   {/* <h2>View All Post</h2> */}
                   <Home />
               </div>
-          ): ui == 'Admin ' ? (
+          ): ui == 'Admin' ? (
               <div className="mainnav_wrapper1">
                   {/* <h2>User Profile</h2> */}
                   <Admin />

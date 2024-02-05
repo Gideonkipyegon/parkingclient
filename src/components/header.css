@@ -4,10 +4,11 @@
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    margin-right: 40%;
-    margin-top: 110px;
+    /* margin-right: 40%; */
+    /* margin-top: 150px; */
     height: 10vh;
     font-size: large;
+    padding: 30px;
 }
 
 .header1 {
@@ -26,7 +27,7 @@ a {
 }
 
 a:hover {
-    color: blue;
+    color: rgb(0, 255, 221);
 }
 
 .logo {
