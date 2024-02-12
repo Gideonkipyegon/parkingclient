@@ -10,8 +10,8 @@ function Header() {
       <Link  to='/Home'>Home</Link>
       <Link  to='/Booking'>Booking</Link>
       <Link  to='/Admin'>Admin</Link>
-      <Link  to='/Reports'>Reports</Link>
-      <Link  to='/Rates'>Rates</Link>
+      {/* <Link  to='/Reports'>Reports</Link> */}
+      {/* <Link  to='/Rates'>Rates</Link> */}
       <Link  to='/About'>About</Link>
       <Link  to='/Contact'>Contact</Link>
       <Link  to='/Login'>Login</Link>

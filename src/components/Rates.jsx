@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './rate.css'
 
 function Rates() {
   const [rating, setRating] = useState(0);
@@ -24,10 +25,10 @@ function Rates() {
   };
 
   return (
-    <div>
+    <div className='rating'>
       {isRated ? (
         <div>
-          Thank you for rating! You gave {rating} stars.
+          Thank you for rating!.
         </div>
       ) : (
         <div>

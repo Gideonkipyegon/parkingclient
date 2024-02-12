@@ -50,6 +50,7 @@ const ParkingSlotBooking = () => {
         </ul>
       </div>
       <button onClick={handleBooking} style={{marginLeft:'25px',marginBottom:'20px',color:'black'}}>Book Your Slot</button>
+  <a href='/Rates' style={{color:'red',textDecoration:'underline'}}>Rates us</a> 
     </div>
   );
 };
