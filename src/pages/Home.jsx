@@ -1,27 +1,26 @@
-import React from 'react'
-import './Home.css'
+import React from 'react';
+import './Home.css';
+
 function Home() {
   return (
     <div className='home'>
-      {/* <h1>Easyparking</h1> */}
       <div className='homecontainer'>
-      <div className='homeimage'>
-      <img src="./images/alex-suprun-A53o1drQS2k-unsplash.jpg" alt="car image" width='100%' height='100%'/>
-      </div>
-      {/* <div className='home-elements'>
-      <form className='loginform'>
-            <p><u>Login</u></p>
-            <label htmlFor="">Firstname:</label>
-            <input type="text" placeholder="fisrtname"/>
-            <label htmlFor="">Password:</label>
-            <input type="password" placeholder="password"/>
-            <a href="Signup">Signup?</a>
-            <button type='submit'>Login</button>
-        </form>
-      </div> */}
+        <h3 style={{textAlign:'center',fontFamily:'sans-serif',fontSize:'medium'}}>welcome to easyparking system home of flexibility and efficiency✨</h3>
+        <div className='homeimage'>
+          <img src="./images/alex-suprun-A53o1drQS2k-unsplash.jpg" alt="car image" className="bg1"/>
+          <img src="./images/campbell-3ZUsNJhi_Ik-unsplash.jpg" alt="car image" className="bg2"/>
+          <img src="./images/white-modern-sport-car-parking-road.jpg" alt="car image" className="bg3"/>
+          <img src="./images/white-offroader-jeep-parking.jpg" alt="car image" className="bg4"/>
+          {/* Duplicate images to ensure continuity of animation */}
+          <img src="./images/alex-suprun-A53o1drQS2k-unsplash.jpg" alt="car image" className="bg1"/>
+          <img src="./images/campbell-3ZUsNJhi_Ik-unsplash.jpg" alt="car image" className="bg2"/>
+          <img src="./images/white-modern-sport-car-parking-road.jpg" alt="car image" className="bg3"/>
+          <img src="./images/white-offroader-jeep-parking.jpg" alt="car image" className="bg4"/>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
+

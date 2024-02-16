@@ -1,19 +1,142 @@
- .home {
-     display: flex;
-     flex-direction: column;
-     /* margin-top: 400px; */
-     align-content: space-between;
- }
- 
- .homecontainer {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     gap: 20px;
- }
- 
- .home-elements {
-     display: flex;
-     justify-content: end;
-     align-items: end;
- }
+/* .home {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-image: url('./images/alex-suprun-A53o1drQS2k-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150vh;
+    width: 100vw;
+    animation: slideBackground 12s linear infinite;
+}
+
+@keyframes slideBackground {
+    0%,
+    100% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    50% {
+        background-position: -100vw 0, -100vw 0, -100vw 0, -100vw 0;
+    }
+} */
+
+
+/*ssecond style/.home {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-image: url('./images/alex-suprun-A53o1drQS2k-unsplash.jpg'), url('./images/campbell-3ZUsNJhi_Ik-unsplash.jpg'), url('./images/white-modern-sport-car-parking-road.jpg'), url('./images/whiteoffroader-jeep-parking.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150vh;
+    width: 100vw;
+}
+
+@keyframes slideBackground1 {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes slideBackground2 {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes slideBackground3 {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes slideBackground4 {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+.homeimage .bg1 {
+    animation: slideBackground1 12s linear infinite;
+}
+
+.homeimage .bg2 {
+    animation: slideBackground2 10s linear infinite;
+}
+
+.homeimage .bg3 {
+    animation: slideBackground3 8s linear infinite;
+}
+
+.homeimage .bg4 {
+    animation: slideBackground4 14s linear infinite;
+}
+
+
+
+.homecontainer {
+  overflow: hidden;
+}
+
+.homeimage {
+  display: flex;
+  animation: moveImages 20s linear infinite; /* Adjust the duration and timing function as needed */
+
+
+/* /* .homecontainer {
+    overflow: hidden;
+}
+
+.homeimage {
+    display: flex;
+    animation: moveImages 20s linear infinite;
+    /* Adjust the duration and timing function as needed */
+
+.homecontainer {
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(216, 205, 205);
+}
+
+.homeimage {
+    display: flex;
+    animation: moveImages 40s linear infinite;
+    height: 100vh;
+    width: 400%;
+    /* Adjust the duration and timing function as needed */
+}
+
+@keyframes moveImages {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.bg1,
+.bg2,
+.bg3,
+.bg4 {
+    width: 100%;
+    /* Each image takes up 25% of the container */
+    height: auto;
+    /* Maintain aspect ratio */
+}

@@ -18,7 +18,7 @@ return (
                   {/* <h2>Create Post</h2> */}
                   <Signup />
               </div>
-          ) : ui == 'view' ? (
+          ) : ui == 'Home' ? (
               <div className="mainnav_wrapper" >
                   {/* <h2>View All Post</h2> */}
                   <Home />
@@ -28,19 +28,12 @@ return (
                   {/* <h2>User Profile</h2> */}
                   <Admin />
               </div>
-          ): ui == 'Reports' ? (
-              <div className="mainnav_wrapper1">
-                  {/* <h2>User Profile</h2> */}
-                  <Reports />
-              </div>
-          ) : ui == 'Transaction' ? (
-              <div className="mainnav_wrapper1">
-                  {/* <h2>User Profile</h2> */}
-                  <Transaction />
-              </div>
-          ) : null
+          ): null
 
       }
   </div>
-)
+);
 }
+
+
+

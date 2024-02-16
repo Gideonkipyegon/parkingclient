@@ -24,7 +24,7 @@ function Login() {
     if(data.token){
         // dispatch({type:'LOGIN_SUCCESS', payload:data})
         alert("login successfull")
-        navigate("/");
+        navigate("/home");
     }
    
 })

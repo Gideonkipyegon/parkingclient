@@ -24,6 +24,7 @@ const handleTransaction = () => {
 }
   return (
     <div className='sidenav'>
+      <h1 style={{marginLeft:'20px',textDecoration:"underline"}}>Dashboard</h1>
       <div className="sidenav_wrapper">
         <div className="sidenav_item" onClick={handleAdmin}>Admin</div>
       </div>
@@ -31,13 +32,7 @@ const handleTransaction = () => {
         <div className="sidenav_item" onClick={handleAdd}>Signup</div>
       </div>
       <div className="sidenav_wrapper">
-        <div className="sidenav_item" onClick={handleView}>Home</div>
-      </div>
-      <div className="sidenav_wrapper">
-      <div className="sidenav_item" onClick={handleReports}>Reports</div> 
-      </div>
-      <div className="sidenav_wrapper">
-      <div className="sidenav_item" onClick={handleTransaction}>Transaction</div> 
+        <div className="sidenav_item" onClick={handleHome}>Home</div>
       </div>
     </div>
   );

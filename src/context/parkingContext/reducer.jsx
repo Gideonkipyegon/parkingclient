@@ -1,5 +1,6 @@
 const Reducer = (state, action) => {
     switch (action.type) {
+
         case "ADD":
             return {
                 ui: action.payload
@@ -13,14 +14,6 @@ const Reducer = (state, action) => {
                 ui: action.payload
             }
         case "ADMIN":
-            return {
-                ui: action.payload
-            }
-        case "REPORTS":
-            return {
-                ui: action.payload
-            }
-        case "TRANSACTION":
             return {
                 ui: action.payload
             }
