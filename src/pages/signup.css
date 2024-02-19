@@ -14,15 +14,16 @@
     background-color: #FFFFFF;
     ;
     width: 20vw;
-    height: 70vh;
+    height: 79vh;
     margin-top: 8px;
-    text-align: center;
+    text-align: left;
     border-radius: 10px;
+    font-family: 'serif';
 }
 
 .signupform input {
     width: 70%;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .signupform button {

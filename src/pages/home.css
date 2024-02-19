@@ -1,122 +1,16 @@
-/* .home {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-image: url('./images/alex-suprun-A53o1drQS2k-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 150vh;
-    width: 100vw;
-    animation: slideBackground 12s linear infinite;
-}
-
-@keyframes slideBackground {
-    0%,
-    100% {
-        background-position: 0 0, 0 0, 0 0, 0 0;
-    }
-    50% {
-        background-position: -100vw 0, -100vw 0, -100vw 0, -100vw 0;
-    }
-} */
-
-
-/*ssecond style/.home {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-image: url('./images/alex-suprun-A53o1drQS2k-unsplash.jpg'), url('./images/campbell-3ZUsNJhi_Ik-unsplash.jpg'), url('./images/white-modern-sport-car-parking-road.jpg'), url('./images/whiteoffroader-jeep-parking.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 150vh;
-    width: 100vw;
-}
-
-@keyframes slideBackground1 {
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
-}
-
-@keyframes slideBackground2 {
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
-}
-
-@keyframes slideBackground3 {
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
-}
-
-@keyframes slideBackground4 {
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
-}
-
-.homeimage .bg1 {
-    animation: slideBackground1 12s linear infinite;
-}
-
-.homeimage .bg2 {
-    animation: slideBackground2 10s linear infinite;
-}
-
-.homeimage .bg3 {
-    animation: slideBackground3 8s linear infinite;
-}
-
-.homeimage .bg4 {
-    animation: slideBackground4 14s linear infinite;
-}
-
-
-
-.homecontainer {
-  overflow: hidden;
-}
-
-.homeimage {
-  display: flex;
-  animation: moveImages 20s linear infinite; /* Adjust the duration and timing function as needed */
-
-
-/* /* .homecontainer {
-    overflow: hidden;
-}
-
-.homeimage {
-    display: flex;
-    animation: moveImages 20s linear infinite;
-    /* Adjust the duration and timing function as needed */
-
 .homecontainer {
     overflow: hidden;
     height: 100vh;
     background-color: rgb(216, 205, 205);
+    background-image: url('./images/white-modern-sport-car-parking-road.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .homeimage {
     display: flex;
-    animation: moveImages 40s linear infinite;
+    animation: moveImages 10s linear infinite;
     height: 100vh;
     width: 400%;
     /* Adjust the duration and timing function as needed */
