@@ -10,24 +10,26 @@
 .signupform {
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
     background-color: #FFFFFF;
-    ;
-    width: 20vw;
-    height: 79vh;
-    margin-top: 8px;
+    width: 30vw;
+    height: 83vh;
+    margin-top: 10px;
+    align-items: center;
     text-align: left;
     border-radius: 10px;
     font-family: 'serif';
+    font-size: large;
+    padding-top: 10px;
 }
 
 .signupform input {
     width: 70%;
-    margin-left: 20px;
+    margin-left: 0px;
+    align-items: center;
 }
 
 .signupform button {
     width: 30%;
-    margin-left: 95px;
+    align-items: center;
     border-radius: 15px;
 }
