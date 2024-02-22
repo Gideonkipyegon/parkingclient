@@ -19,7 +19,8 @@ function Booking() {
           .then((response) => {
               console.log(response);
               console.log('success', response.data.message);
-              navigate("/home");
+              alert("slot booked successfully")
+              navigate("/Transaction");
           })
           .catch((response) => {
               console.log(response)
