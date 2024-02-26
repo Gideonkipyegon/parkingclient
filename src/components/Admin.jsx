@@ -1,41 +1,52 @@
-import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Context } from '../context/userContext/Context';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import Axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { apidomain } from '../utils/domains';
 import './admin.css'
-function AdminLogin() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  // const history = useHistory();
+function Admin() {
+  // const { user, dispatch } = useContext(Context);
+  const navigate = useNavigate();
+  const schema = yup.object().shape({
+    Username: yup.string().required('Username is required'),
+    password: yup.string().required('password is required').min(4, 'password is too short'),
+  });
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
 
-    // Check admin credentials (this is a basic example, in a real app, you'd perform server-side authentication)
-    if (username === 'admin' && password === 'password') {
-      // Successful login, navigate to admin panel
-      Axios.post(`${apidomain}/auth/register`, data);
-    } else {
-      alert('Invalid credentials. Please try again.');
+  const onSubmit = (data) => { 
+    Axios.post(`${apidomain}/admins`, data)
+   .then(({data}) => {
+    if(data.token){
+        // dispatch({type:'LOGIN_SUCCESS', payload:data})
+        alert("login successfull")
+        navigate("/");
     }
-  };
-
+   
+})
+.catch((response) => {
+    console.log(response)
+    alert("wrong credentials")
+    
+});}
   return (
-    <div className='admin'>
-      <h2>Admin Login</h2>
-      <form onSubmit={handleLogin} className='adminform'>
-        <label>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </label>
-        <br />
-        <button type="submit">Login</button>
-      </form>
+    <div className='login'>
+        <form className="loginform" onSubmit={handleSubmit(onSubmit)}>
+        <p><u>AdminLogin</u></p>
+        <label htmlFor="">username</label>
+        <input type="text" {...register('Username')} placeholder="Username"/>
+        <p>{errors.FirstName?.message}</p>
+        <label htmlFor="">Password</label>
+        <input type="password" {...register('password')} placeholder="password"/>
+        <p>{errors.password?.message}</p>
+        <button type='submit'>Login</button>
+        </form>
     </div>
-  );
+  )
 }
 
-export default AdminLogin;
+export default Admin

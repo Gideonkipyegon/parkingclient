@@ -16,7 +16,7 @@ import Sidenav from './components/Sidenav'
 import Admin from './components/Admin.jsx'
 import Rates from './components/Rates.jsx'
 import Reports from './components/Reports.jsx'
-import Transaction from './components/Transaction.jsx'
+import Payment from './components/Payment.jsx'
 function App() {
   
 
@@ -29,7 +29,7 @@ function App() {
       <Route path='/Home' element={<Home />}/>
       <Route path='/Booking' element={<Booking />}/>
       <Route path='/Reports' element={<Reports />}/>
-      <Route path='/Transaction' element={<Transaction />}/>
+      <Route path='/Payment' element={<Payment />}/>
       <Route path='/Admin' element={<Admin />}/>
       <Route path='/Login' element={<Login />}/>
       <Route path='/Rates' element={<Rates />}/>
