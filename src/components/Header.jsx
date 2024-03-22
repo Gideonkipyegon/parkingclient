@@ -4,13 +4,14 @@ import './header.css'
 function Header() {
   return (
     <div className='header'>
-      <h5 className="logo">EasyParking</h5>
+      <h3 className="logo" style={{fontFamily:"sans-serif",fontWeight:'bold'}}>EasyParking</h3>
       <div className='header1'>
       <Link  to='/'></Link>
       <Link  to='/Home'>Home</Link>
       <Link  to='/Booking'>Booking</Link>
       <Link  to='/Admin'>Admin</Link>
       <Link  to='/Payment'>Payment</Link>
+      <Link  to='/Bookinglist'>Bookinglist</Link>
       {/* <Link  to='/Rates'>Rates</Link> */}
       <Link  to='/About'>About</Link>
       <Link  to='/Contact'>Contact</Link>

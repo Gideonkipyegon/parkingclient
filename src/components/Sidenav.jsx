@@ -10,29 +10,41 @@ export default function Sidenav() {
   const handleView = () => {
       dispatch({ type: "ADD", payload: 'view' })
   }
-  const handleHome = () => {
-      dispatch({ type: "HOME", payload: 'Home' })
+  const handleBooking = () => {
+      dispatch({ type: "BOOKING", payload: 'Booking' })
   }
+  const handleSignup = () => {
+    dispatch({ type: "SIGNUP", payload: 'Signup' })
+}
   const handleAdmin = () => {
     dispatch({ type: "ADMIN", payload: 'Admin' })
 }
-const handleReports = () => {
-  dispatch({ type: "REPORTS", payload: 'Reports' })
+const handlePayment = () => {
+  dispatch({ type: "PAYMENT", payload: 'Payment' })
 }
-const handleTransaction = () => {
-  dispatch({ type: "TRANSACTION", payload: 'Transaction' })
+const handleAbout = () => {
+  dispatch({ type: "ABOUT", payload: 'About' })
 }
   return (
     <div className='sidenav'>
-      <h1 style={{marginLeft:'20px',textDecoration:"underline"}}>Dashboard</h1>
+      <h1 style={{textDecoration:"underline",textAlign:'center'}}>Dashboard</h1>
+      <div className="sidenav_wrapper">
+        <div className="sidenav_item" onClick={handleAdd}>Booking</div>
+      </div>
+      <div className="sidenav_wrapper">
+        <div className="sidenav_item" onClick={handleView}>Bookinglist</div>
+      </div>
+      <div className="sidenav_wrapper">
+        <div className="sidenav_item" onClick={handleSignup}>Signup</div>
+      </div>
       <div className="sidenav_wrapper">
         <div className="sidenav_item" onClick={handleAdmin}>Admin</div>
       </div>
       <div className="sidenav_wrapper">
-        <div className="sidenav_item" onClick={handleAdd}>Signup</div>
+        <div className="sidenav_item" onClick={handlePayment}>Payment</div>
       </div>
       <div className="sidenav_wrapper">
-        <div className="sidenav_item" onClick={handleHome}>Home</div>
+        <div className="sidenav_item" onClick={handleAbout}>About</div>
       </div>
     </div>
   );

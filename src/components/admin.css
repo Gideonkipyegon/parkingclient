@@ -4,7 +4,7 @@
     background-color: rgb(252, 243, 237);
     margin-top: -30px;
     justify-content: center;
-    height: 70vh;
+    height: 50vh;
 }
 
 h2 {
@@ -13,18 +13,19 @@ h2 {
     text-align: center;
 }
 
-.adminform {
+.adminform3 {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    background-color: #c04343;
     margin-left: 450px;
     align-content: center;
     gap: 10px;
     width: 40%;
     padding-bottom: 60px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid rgb(168, 64, 64);
     margin-top: 5px;
+    height: 20vh;
 }

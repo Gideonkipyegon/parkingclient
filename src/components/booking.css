@@ -10,7 +10,7 @@
 .bookingform {
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     width: 30vw;
     height: 40vh;
     margin-top: 10px;

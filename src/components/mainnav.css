@@ -19,9 +19,9 @@
     display: flex;
     height: 70px;
     width: 70vw;
-    margin-left: 100px;
-    align-items: flex-end;
-    margin-top: -500px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: aquamarine;
 }
 
 .mainnav_wrapper>h2 {
@@ -34,19 +34,17 @@
 }
 
 .mainnav_wrapper1 {
-    margin-top: -230px;
+    margin-top: 10px;
     display: flex;
     height: 20vh;
     width: 70vw;
-    margin-left: 120px;
     align-items: flex-end;
-    margin-bottom: 230.5px;
 }
 
 .mainnav_wrapper3 {
     width: 50vw;
     height: 82.5vh;
-    margin-top: -760px;
-    margin-bottom: 180px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: -185px;
 }

@@ -1,52 +1,51 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Context } from '../context/userContext/Context';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import Axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { apidomain } from '../utils/domains';
+import Axios from 'axios'
 import './admin.css'
 function Admin() {
-  // const { user, dispatch } = useContext(Context);
-  const navigate = useNavigate();
+  const navigate= useNavigate();
   const schema = yup.object().shape({
-    Username: yup.string().required('Username is required'),
-    password: yup.string().required('password is required').min(4, 'password is too short'),
-  });
-
-  const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
-
-  const onSubmit = (data) => { 
-    Axios.post(`${apidomain}/admins`, data)
-   .then(({data}) => {
-    if(data.token){
-        // dispatch({type:'LOGIN_SUCCESS', payload:data})
-        alert("login successfull")
-        navigate("/");
-    }
-   
-})
-.catch((response) => {
-    console.log(response)
-    alert("wrong credentials")
+    Username: yup.string().required("Username is required"),
+    Password: yup.string().required("Passwords is required").min(4, "Password is too short"),
     
-});}
+  })
+  const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema), });
+  const onSubmit = (data) => {
+      Axios.post(`${apidomain}/admins`, data)
+          .then((response) => {
+              console.log(response);
+              console.log('success', response.data.message);
+              navigate("/");
+          })
+          .catch((response) => {
+              console.log(response)
+
+          });
+  }
   return (
-    <div className='login'>
-        <form className="loginform" onSubmit={handleSubmit(onSubmit)}>
-        <p><u>AdminLogin</u></p>
-        <label htmlFor="">username</label>
-        <input type="text" {...register('Username')} placeholder="Username"/>
-        <p>{errors.FirstName?.message}</p>
-        <label htmlFor="">Password</label>
-        <input type="password" {...register('password')} placeholder="password"/>
-        <p>{errors.password?.message}</p>
+    <div className='signup'>
+      <fieldset>
+      <form className='signupform3' onSubmit = { handleSubmit(onSubmit)}>
+        <h3>Admin Login</h3>
+        <label htmlFor="">username:</label>
+        <input type="text" {...register("Username")} placeholder='username' />
+        <p>{errors.Username?.message}</p>
+        <label htmlFor="">Password:</label>
+        <input type="text" {...register("Password")} placeholder='Password' />
+        <p>{errors.Password?.message}</p>
         <button type='submit'>Login</button>
-        </form>
+      </form>
+      </fieldset>
     </div>
   )
 }
 
 export default Admin
+
+
+
+

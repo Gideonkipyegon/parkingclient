@@ -9,7 +9,7 @@ const Reducer = (state, action) => {
             return {
                 ui: action.payload
             }
-        case "HOME":
+        case "SIGNUP":
             return {
                 ui: action.payload
             }
@@ -17,6 +17,15 @@ const Reducer = (state, action) => {
             return {
                 ui: action.payload
             }
+        case "PAYMENT":
+            return {
+                ui: action.payload
+            }
+        case "ABOUT":
+            return {
+                ui: action.payload
+            }
+
         default:
             return state;
     }

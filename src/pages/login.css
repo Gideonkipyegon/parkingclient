@@ -12,10 +12,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     ;
     width: 20vw;
-    height: 50vh;
+    height: 55vh;
     text-align: center;
     border-radius: 10px;
     margin-top: 10px;

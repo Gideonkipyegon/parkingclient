@@ -3,7 +3,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                height: 80vh;
+                height: 100vh;
                 border-right: 1px solid #ccc;
                 gap: 10px;
                 background-color: rgb(48, 98, 155);
@@ -17,8 +17,6 @@
                 margin: 10px;
                 background-color: gray;
                 border-radius: 10px;
-                /* text-align: center; */
-                /* align-items: center; */
             }
             
             .sidenav_title {

@@ -1,6 +1,7 @@
 .homecontainer {
     overflow: hidden;
     height: 100vh;
+    width: 103vw;
     background-color: rgb(216, 205, 205);
     background-image: url('./images/white-modern-sport-car-parking-road.jpg');
     background-size: cover;

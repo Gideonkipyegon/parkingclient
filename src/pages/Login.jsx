@@ -35,16 +35,19 @@ function Login() {
 });}
   return (
     <div className='login'>
+      <fieldset>
         <form className="loginform" onSubmit={handleSubmit(onSubmit)}>
-        <p><u>Login</u></p>
+        <h3><u>Login page</u></h3>
         <label htmlFor="">Firstname</label>
         <input type="text" {...register('FirstName')} placeholder="firstname"/>
         <p>{errors.FirstName?.message}</p>
         <label htmlFor="">Password</label>
         <input type="password" {...register('password')} placeholder="password"/>
         <p>{errors.password?.message}</p>
+        <a href="Signup" style={{color:'black',fontFamily:'serif'}}>i don't account?</a>
         <button type='submit'>Login</button>
         </form>
+        </fieldset>
     </div>
   )
 }

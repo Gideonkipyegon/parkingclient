@@ -18,7 +18,7 @@ function Payment() {
           .then((response) => {
               console.log(response);
               console.log('success', response.data.message);
-              alert("payment is successfully done")
+              alert("payment is successfully done,thanks for booking with us")
               navigate("/home");
           })
           .catch((response) => {
@@ -28,6 +28,8 @@ function Payment() {
   }
   return (
     <div className='booking'>
+    <fieldset>
+      <h3 style={{textAlign:'center',textDecoration:'underline'}}>Payment</h3>
       <form className='bookingform' onSubmit = { handleSubmit(onSubmit)}>
         <label htmlFor="">Total Amount:</label>
         <input type="text" {...register("TotalAmount")} placeholder='TotalAmount' />
@@ -37,6 +39,7 @@ function Payment() {
         <p>{errors.PaymentMode?.message}</p>
         <button type='submit'>Pay</button> 
       </form>
+      </fieldset>
     </div>
   )
 }
@@ -107,7 +110,7 @@ export default Payment
 //         <p>{errors.PaymentMode?.message}</p>
 //         <label htmlFor="">Card Details:</label>
 //         <CardElement />
-//         {error && <div style={{ color: 'red' }}>{error}</div>}
+//         {error && <div style={{ color: 'black' }}>{error}</div>}
 //         <button type='submit'>Pay</button> 
 //       </form>
 //     </div>

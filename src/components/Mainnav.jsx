@@ -3,11 +3,11 @@ import { Context } from "../context/parkingContext/context";
 import Home from "../pages/Home";
 import Admin from "../components/Admin";
 import Reports from "../components/Reports";
-import Transaction from "../components/Transaction";
+import Bookinglist from "../components/Bookinglist";
 import Signup from '../pages/Signup'
 import Contact from '../pages/Contact'
 import "./mainnav.css"
-// import AdminLogin from "./Admin";
+import Bookinglist from "./Bookinglist";
 export default function Mainnav() {
   const { ui } = useContext(Context);
 return (
@@ -16,19 +16,34 @@ return (
           ui == 'add' ? (
               <div className="mainnav_wrapper">
                   {/* <h2>Create Post</h2> */}
-                  <Signup />
+                  <Booking/>
               </div>
-          ) : ui == 'Home' ? (
+          ) : ui == 'view' ? (
+            <div className="mainnav_wrapper" >
+                {/* <h2>View All booked slots</h2> */}
+                <Bookinglist/>
+            </div>
+        ):ui == 'Signup' ? (
+            <div className="mainnav_wrapper" >
+                {/* <h2>View All Post</h2> */}
+                <Signup/>
+            </div>
+        ):ui == 'Admin' ? (
               <div className="mainnav_wrapper" >
                   {/* <h2>View All Post</h2> */}
-                  <Home />
-              </div>
-          ): ui == 'Admin' ? (
-              <div className="mainnav_wrapper1">
-                  {/* <h2>User Profile</h2> */}
                   <Admin />
               </div>
-          ): null
+          ): ui == 'Payment' ? (
+              <div className="mainnav_wrapper1">
+                  {/* <h2>User Profile</h2> */}
+                  <Payment />
+              </div>
+          ):ui == 'About' ? (
+            <div className="mainnav_wrapper1">
+                {/* <h2>User Profile</h2> */}
+                <About />
+            </div>
+        ): null
 
       }
   </div>

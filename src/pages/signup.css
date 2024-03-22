@@ -10,16 +10,17 @@
 .signupform {
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     width: 30vw;
     height: 83vh;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     align-items: center;
     text-align: left;
     border-radius: 10px;
     font-family: 'serif';
     font-size: large;
-    padding-top: 10px;
+    padding-top: 5px;
+    border-color: 2px solid black;
 }
 
 .signupform input {

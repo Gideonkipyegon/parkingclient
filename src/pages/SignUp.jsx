@@ -31,6 +31,7 @@ function SignUp() {
   }
   return (
     <div className='signup'>
+      <fieldset>
       <form className='signupform' onSubmit = { handleSubmit(onSubmit)}>
         <label htmlFor="">Firstname:</label>
         <input type="text" {...register("FirstName")} placeholder='firstname' />
@@ -55,6 +56,7 @@ function SignUp() {
         <p>{errors.ConfirmPassword?.message}</p>
         <button type='submit'>Register</button>
       </form>
+      </fieldset>
     </div>
   )
 }

@@ -10,6 +10,7 @@
     padding: 20px;
     gap: 20px;
     width: 100vw;
+    overflow: auto;
 }
 
 .footer1 {
@@ -23,4 +24,6 @@
 
 h5 {
     text-decoration: underline;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
