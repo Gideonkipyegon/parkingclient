@@ -34,12 +34,12 @@ return (
                   <Admin />
               </div>
           ): ui == 'Payment' ? (
-              <div className="mainnav_wrapper1">
+              <div className="mainnav_wrapper">
                   {/* <h2>User Profile</h2> */}
                   <Payment />
               </div>
           ):ui == 'About' ? (
-            <div className="mainnav_wrapper1">
+            <div className="mainnav_wrapper">
                 {/* <h2>User Profile</h2> */}
                 <About />
             </div>

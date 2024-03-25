@@ -19,6 +19,7 @@ function Admin() {
           .then((response) => {
               console.log(response);
               console.log('success', response.data.message);
+              alert("login successfull")
               navigate("/");
           })
           .catch((response) => {
