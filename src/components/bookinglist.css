@@ -1,4 +1,4 @@
-.icons {
+/* .icons {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -30,7 +30,6 @@
     box-shadow: inset 0 0 10px #000000;
     flex-direction: column;
     align-items: center;
-    /* height: 20px; */
     gap: 20px;
     padding-inline: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -49,4 +48,31 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+} */
+
+.card {
+    background-color: #d8caca;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 20px;
+    margin: 10px;
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    justify-content: space-between;
 }
+
+.card p {
+    margin: 5px 0;
+}
+
+.parking_spots_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* Adjust as needed */
