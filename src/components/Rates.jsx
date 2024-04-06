@@ -1,27 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import './rate.css'
+import './rate.css';
 
 function Rates() {
-  const [rating, setRating] = useState(0);
   const [isRated, setIsRated] = useState(false);
+  const [ratesData, setRatesData] = useState([]);
 
   useEffect(() => {
-    // You can customize this to set conditions for when the rating prompt should appear automatically.
-    // For this example, it will appear after 1 second.
-    const timeout = setTimeout(() => {
-      // You can also set a default rating if you want.
-      // For now, let's set it to 0, and the user can choose their rating.
-      setRating(0);
-      setIsRated(false);
-    }, 10);
+    fetchRates();
+  }, []);
 
-    return () => clearTimeout(timeout); // Cleanup the timeout to avoid memory leaks
-  }, []); // The empty dependency array ensures that this effect runs only once on component mount.
-
-  const handleRating = (value) => {
-    setRating(value);
-    setIsRated(true);
-    // Here, you can send the rating data to your server or perform any other necessary action.
+  const fetchRates = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/rates');
+      if (!response.ok) {
+        throw new Error('Failed to fetch rates');
+      }
+      const data = await response.json();
+      setRatesData(data);
+    } catch (error) {
+      console.error('Error fetching rates:', error);
+    }
   };
 
   return (
@@ -32,22 +30,16 @@ function Rates() {
         </div>
       ) : (
         <div>
-          <p>Please rate our system:</p>
-          <div>
-            {[1, 2, 3, 4, 5].map((value) => (
-              <span
-                key={value}
-                onClick={() => handleRating(value)}
-                style={{
-                  cursor: 'pointer',
-                  fontSize: '24px',
-                  color: value <= rating ? 'gold' : 'gray',
-                }}
-              >
-                &#9733; {/* Unicode star character */}
-              </span>
+          <h3>Rates Data:</h3>
+          <ul>
+            {ratesData.map((rateItem) => (
+              <li key={rateItem.id}>
+                Vehicle Type: {rateItem.VehicleType}, Spot Type: {rateItem.SpotType}, 
+                Hourly Rate: {rateItem.HourlyRate}, Daily Rate: {rateItem.DailyRate}, 
+                Monthly Rate: {rateItem.MonthlyRate}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
     </div>

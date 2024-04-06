@@ -11,17 +11,17 @@ export default function Mainnav() {
             {
                 ui == 'add' ? (
                     <div className="mainnav_wrapper">
-                        <h2>Book your slot</h2>
+                        {/* <h2>Book your slot</h2> */}
                         <Booking />
                     </div>
                 ) : ui == 'view' ? (
                     <div className="mainnav_wrapper" >
-                        <h2>View All Bookinglist</h2>
+                        {/* <h2>View All Bookinglist</h2> */}
                         <Bookinglist />
                     </div>
                 ) : ui == 'Login' ? (
                     <div className="mainnav_wrapper">
-                        <h2>Login</h2>
+                        {/* <h2>Login</h2> */}
                         <Login />
                     </div>
                 ) : null

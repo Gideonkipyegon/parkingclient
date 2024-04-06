@@ -24,11 +24,13 @@ function Reports() {
 
   return (
     <div className='report'>
-      <h2>Reports</h2>
-      <ul  style={{margin:'10px',color:'black'}}>
+      <h2 style={{textDecoration:'underline',color:'green'}}>Reports from Admins</h2>
+      <ul style={{ margin: '10px', color: 'black',gap:'10px' }}>
         {/* Render each report item */}
-        {reportData.map((reports, index) => (
-          <li key={index}>{reports.name} - {reports.value}</li>
+        {reportData.map((report, index) => (
+          <li key={index}>
+            ReportID: {report.ReportID},  AdminID: {report.AdminID},  ReportDate: {report.ReportDate} , ReportType: {report.ReportType} ,ReportData: {report.ReportData}
+          </li>
           // Adjust the property names based on your database structure
         ))}
       </ul>

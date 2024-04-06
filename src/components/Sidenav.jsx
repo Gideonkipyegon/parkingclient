@@ -20,10 +20,10 @@ export default function Sidenav() {
               <div className="sidenav_title" onClick={handleLogin}> Login</div>
             </div>
             <div className="sidenav_wrapper">
-                <div className="sidenav_item" onClick={handleAdd}>Booking</div>
+                <div className="sidenav_title" onClick={handleAdd}>Booking</div>
             </div>
             <div className="sidenav_wrapper">
-                <div className="sidenav_item" onClick={handleView}>Bookinglist</div>
+                <div className="sidenav_title" onClick={handleView}>Bookinglist</div>
             </div>
 
         </div>
